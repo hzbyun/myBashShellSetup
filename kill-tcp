@@ -1,0 +1,17 @@
+#! /bin/sh
+
+# I used to setup this file in the bin folder so that I can just call it globally
+# useful when I want to kill any tcp network by port number argument
+
+if [ -z "$1" ]
+then
+    echo "missing port as a argument"
+    exit 1
+fi
+
+lsof -iTCP -sTCP:LISTEN -P | grep $1 | while read -r line ; do
+    pid=$(echo $line | awk '{print $2}')
+    echo "killing pid - $pid"
+
+    kill -9 $pid
+done

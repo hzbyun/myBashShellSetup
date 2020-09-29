@@ -1,0 +1,6 @@
+#! /bin/sh
+
+# I used to setup this file in the bin folder so that I can just call it globally
+# useful when I want to display all the opened tcp network with port
+
+lsof -iTCP -sTCP:LISTEN -P
