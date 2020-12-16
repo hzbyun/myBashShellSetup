@@ -29,7 +29,7 @@ shellArgs: ['~']                -> This is for linux home
 shellArgs: ['--login']          -> This is for window home
 ```
 
-**How to change default home for Windows Terminal in Settings.json**
+**How to change default home for wsl in Windows Terminal through Settings.json**
 ```
 To make Ubuntu as a first window              -> "defaultProfile": "{wsl guid, which is found in profiles.list}"
 To make linux home start for Ubuntu window    -> Add property called startingDirectory along with other properties in wsl 
