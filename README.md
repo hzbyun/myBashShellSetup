@@ -26,5 +26,21 @@ https://superuser.com/questions/46748/how-do-i-make-bash-my-default-shell-on-ubu
 https://github.com/vercel/hyper/issues/2369
 ```
 shellArgs: ['~']                -> This is for linux home
-shellArgs: ['--login']       -> This is for window home
+shellArgs: ['--login']          -> This is for window home
+```
+
+**How to change default home for Windows Terminal in Settings.json**
+```
+To make Ubuntu as a first window              -> "defaultProfile": "{wsl guid, which is found in profiles.list}"
+To make linux home start for Ubuntu window    -> Add property called startingDirectory along with other properties in wsl 
+
+example in profiles.list--> 
+{
+    "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "hidden": false,
+    "name": "Ubuntu",
+    "source": "Windows.Terminal.Wsl",
+    "startingDirectory": "//wsl$/Ubuntu/home/hzbyun"
+},
+
 ```
